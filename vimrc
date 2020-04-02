@@ -56,7 +56,6 @@ Plugin 'gcmt/taboo.vim'
 " Plugin 'user/L9', {'name': 'newL9'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
 " Default mapping conflicts with YCM.
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
@@ -199,12 +198,11 @@ let g:session_autoload = 'yes'
 " This plugin has a few conflicting shortcuts so give it a different leader key.
 let g:ConqueGdb_Leader = ','
 
-" Configure FZF per http://g/engtricks/00hD2TPiSp8
-" todo
-"nnoremap <silent> <Leader><Enter> :call fzf#run({
-"      \   'source': printf('find %s -type f', substitute(system("print_interesting_code_paths.py"), '\n', ' ', 'g')),
-"      \   'sink': 'e'
-"      \ })<CR>
+" Configure FZF to show a list of files on \-<Enter>
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+      \   'source': printf('find %s -type f', substitute(system("print_interesting_code_paths.py"), '\n', ' ', 'g')),
+      \   'sink': 'e'
+      \ })<CR>
 
 " Configure Taboo to save tab names in session.
 set sessionoptions+=tabpages,globals
