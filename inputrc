@@ -1,0 +1,22 @@
+# From the FAQ at https://github.com/scop/bash-completion . Allows single tab completion as opposed to requiring a double tab.
+set show-all-if-ambiguous on
+# See https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html#Readline-Init-File-Syntax
+set show-all-if-unmodified on
+set skip-completed-text on
+set colored-completion-prefix on
+set colored-stats on
+set visible-stats on
+# Shows the editing mode: emacs, vi command, or vi insert.
+set show-mode-in-prompt on
+# Makes ctrl-w work better for deleting words
+set bind-tty-special-chars off
+
+# 2018-04-10 Page-Up and Page-Down are bound in /etc/inputrc for some reason.
+# Page-Up
+#"\e[5~":
+# Page-Down
+#"\e[6~":
+
+# ctrl-page-up and ctrl-page-down go to prev/next screen window - doesn't work as-is
+#"\C-\e[5~": "\C-ap"
+#"\C-\e[6~": "\C-an"
