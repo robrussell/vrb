@@ -14,6 +14,9 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
@@ -60,6 +63,11 @@ call vundle#end()            " required
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+" Must be after vundle#end()
+call glaive#Install()
+Glaive codefmt plugin[mappings]
+"Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
 
 filetype plugin indent on
 syntax on
