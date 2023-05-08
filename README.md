@@ -37,3 +37,5 @@ The local bash configuration at ~/.bashrc contains
 source ~/code/vrb/bashrc
 
 ```
+
+Same for bash_aliases.
